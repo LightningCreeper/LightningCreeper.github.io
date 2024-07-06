@@ -22,7 +22,7 @@ h4 {
 p {
     font-family: "思源黑体";
     font-size: 15px;
-    position: fixed;;
+    position: relative;
     left: 100px;
     top: 50px;
 }
