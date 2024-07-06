@@ -8,15 +8,21 @@ h1 {
 }
 
 h2 {
-    text-align: center;
+    position: relative;
+    left: 100px;
+    top: 50px;
 }
 
 h3 {
-    text-align: center;
+    position: relative;
+    left: 100px;
+    top: 50px;
 }
 
 h4 {
-    text-align: center;
+    position: relative;
+    left: 100px;
+    top: 50px;
 }
 
 p {
