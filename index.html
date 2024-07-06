@@ -40,6 +40,25 @@
             z-index: 9999;
             background-color: #cccccc;
         }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            text-align: center;
+            position: relative;
+        }
+
+        .box span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
@@ -49,14 +68,14 @@
         <p style="text-align: center;">LightningCreeper's Blog</p>
     </header>
 
-    <div style="background-color: #cccccc;width: 90%; height: 150px; border: 1px">
+    <div class = "box" style="background-color: #cccccc;width: 90%; height: 150px; border: 1px; margin: 5%">
         <h1>
             <a href="/About me"> About me </a>
         </h1>
     </div>
 
-    <div style="background-color: #cccccc;width: 90%; height: 150px; border: 1px; margin: 5%">
-        <h1>
+    <div class = "box" style="background-color: #cccccc;width: 90%; height: 150px; border: 1px; margin: 5%">
+        <h1 style="text-align: center;">
             <a href="/HLD"> HLD </a>
         </h1>
     </div>
