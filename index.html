@@ -60,6 +60,13 @@
             transform: translate(-50%, -50%);
         }
     </style>
+    <style>
+        .link-style {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
@@ -68,10 +75,9 @@
         <p style="text-align: center;">Welcome!</p>
     </header>
 
-    <div class="box"
-        style="background-color: #cccccc;width: 90%; height: 150px; border: 1px; margin-top: 10px; margin-bottom: 10px;margin-left: 5%;margin-right: 5%;">
+    <div class="link-style" onclick="window.location.href='/About me';">
         <h1>
-            <a href="/About me"> About me </a>
+            About me
         </h1>
     </div>
 
