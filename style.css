@@ -3,34 +3,9 @@ body {
     color: #222222;
 }
 
-h1 {
-    text-align: center;
-}
-
-h2 {
-    position: relative;
-    left: 100px;
-    top: 50px;
-}
-
-h3 {
-    position: relative;
-    left: 100px;
-    top: 50px;
-}
-
-h4 {
-    position: relative;
-    left: 100px;
-    top: 50px;
-}
-
 p {
     font-family: "思源黑体";
     font-size: 15px;
-    position: relative;
-    left: 100px;
-    top: 50px;
 }
 
 li {
@@ -39,6 +14,5 @@ li {
 }
 
 code {
-    font-family: "Fira Code";
     font-size: 14px;
 }

@@ -45,61 +45,63 @@
 
 <body>
     <header>
-        <h1 style="text-align: center; position: static;">树链剖分</h1>
+        <h1 style="text-align: center;">树链剖分</h1>
     </header>
 
-    <p><a href="https://www.luogu.com/article/e273yi3o">tip</a></p>
-    <h2>DSU on Tree</h2>
-    <p>题意：求每个子树内每种颜色的数量</p>
-    <p>暴力把轻儿子与根节点加到cnt数组，保留重儿子往下DFS</p>
-    <p>常数小，$O(n\log n)$</p>
-    <h2>正文</h2>
-    <p>路径与子树的操作使用树链剖分可以转为区间操作。</p>
-    <h2>题</h2>
-    <h3><a href="https://uoj.ac/problem/673">【NOI2021】轻重边</a></h3>
-    <ol>
-        <li>
-            <p>给定两个点 $a$ 和 $b$，首先对于 $a$ 到 $b$ 路径上的所有点 $x$（包含 $a$ 和 $b$），你要将与 $x$ 相连的所有边变为轻边。然后再将 $a$ 到 $b$
-                路径上包含的所有边变为重边。
-            </p>
-        </li>
-        <li>
-            <p>给定两个点 $a$ 和 $b$，你需要计算当前 $a$ 到 $b$ 的路径上一共包含多少条重边。</p>
-        </li>
-    </ol>
-    <p>做法：根据 LCT 的性质，轻重边切换最多 $O(n\log n)$ 个，暴力做法：暴力找切换的边然后单点修改区间查询，$O(n\log^3 n)$。</p>
-    <p>正解：节点染色，同色重边，异色轻边，直接做就完了 $O(n\log^2 n)$。</p>
-    <h3><a href="https://loj.ac/p/6669">Nauuo and Binary Tree</a></h3>
-    <p>交互</p>
-    <p>一个节点数最多 $3000$ 二叉树，每次询问问两点距离，在 $30000$ 次内还原原树</p>
-    <ol>
-        <li>
-            <p>问所有点深度</p>
-        </li>
-        <li>
-            <p>可以查询两点lca深度</p>
-        </li>
-        <li>
-            <p>加点，有了目前的轻重链剖分，查这个点在重链顶端的位置，找到这个点的位置。</p>
-        </li>
-    </ol>
-    <h3><a href="https://atcoder.jp/contests/abc269/tasks/abc269_h">Antichain</a></h3>
-    <p>求大小分别为 $1\to n$ 的好的集合数量，好的集合定义为里面有一个人是另一个人的祖宗。</p>
-    <p>$dp_{i,j}$ dp，表示节点 $i$ 里大小为 $j$。</p>
-    <p>链分治+dsuontree</p>
-    <p>整个重链一起考虑，轻儿子直接分治fft。</p>
-    <p>$O(n\log^3n)$</p>
-    <h3><a href="https://codeforces.com/gym/102331/problem/J">Jiry Matchings</a></h3>
-    <p>$dp_{u,k,0/1}$ </p>
-    <p>dsuontree，min+卷积</p>
-    <h2>长链剖分</h2>
-    <p>轻儿子深度和为 $O(n)$。</p>
-    <h3><a href="https://www.luogu.com.cn/problem/P5903">P5903 </a></h3>
-    <p>板子</p>
-    <h3>WC2010 重建计划</h3>
-    <p>二分，然后一样搞。</p>
-    <h3>P5904</h3>
-    <p>枚举lca一样搞。</p>
+    <div style="margin: 10%">
+        <p><a href="https://www.luogu.com/article/e273yi3o">tip</a></p>
+        <h2>DSU on Tree</h2>
+        <p>题意：求每个子树内每种颜色的数量</p>
+        <p>暴力把轻儿子与根节点加到cnt数组，保留重儿子往下DFS</p>
+        <p>常数小，$O(n\log n)$</p>
+        <h2>正文</h2>
+        <p>路径与子树的操作使用树链剖分可以转为区间操作。</p>
+        <h2>题</h2>
+        <h3><a href="https://uoj.ac/problem/673">【NOI2021】轻重边</a></h3>
+        <ol>
+            <li>
+                <p>给定两个点 $a$ 和 $b$，首先对于 $a$ 到 $b$ 路径上的所有点 $x$（包含 $a$ 和 $b$），你要将与 $x$ 相连的所有边变为轻边。然后再将 $a$ 到 $b$
+                    路径上包含的所有边变为重边。
+                </p>
+            </li>
+            <li>
+                <p>给定两个点 $a$ 和 $b$，你需要计算当前 $a$ 到 $b$ 的路径上一共包含多少条重边。</p>
+            </li>
+        </ol>
+        <p>做法：根据 LCT 的性质，轻重边切换最多 $O(n\log n)$ 个，暴力做法：暴力找切换的边然后单点修改区间查询，$O(n\log^3 n)$。</p>
+        <p>正解：节点染色，同色重边，异色轻边，直接做就完了 $O(n\log^2 n)$。</p>
+        <h3><a href="https://loj.ac/p/6669">Nauuo and Binary Tree</a></h3>
+        <p>交互</p>
+        <p>一个节点数最多 $3000$ 二叉树，每次询问问两点距离，在 $30000$ 次内还原原树</p>
+        <ol>
+            <li>
+                <p>问所有点深度</p>
+            </li>
+            <li>
+                <p>可以查询两点lca深度</p>
+            </li>
+            <li>
+                <p>加点，有了目前的轻重链剖分，查这个点在重链顶端的位置，找到这个点的位置。</p>
+            </li>
+        </ol>
+        <h3><a href="https://atcoder.jp/contests/abc269/tasks/abc269_h">Antichain</a></h3>
+        <p>求大小分别为 $1\to n$ 的好的集合数量，好的集合定义为里面有一个人是另一个人的祖宗。</p>
+        <p>$dp_{i,j}$ dp，表示节点 $i$ 里大小为 $j$。</p>
+        <p>链分治+dsuontree</p>
+        <p>整个重链一起考虑，轻儿子直接分治fft。</p>
+        <p>$O(n\log^3n)$</p>
+        <h3><a href="https://codeforces.com/gym/102331/problem/J">Jiry Matchings</a></h3>
+        <p>$dp_{u,k,0/1}$ </p>
+        <p>dsuontree，min+卷积</p>
+        <h2>长链剖分</h2>
+        <p>轻儿子深度和为 $O(n)$。</p>
+        <h3><a href="https://www.luogu.com.cn/problem/P5903">P5903 </a></h3>
+        <p>板子</p>
+        <h3>WC2010 重建计划</h3>
+        <p>二分，然后一样搞。</p>
+        <h3>P5904</h3>
+        <p>枚举lca一样搞。</p>
+    </div>
 
     <footer>
         <p style="text-align: center; position: static;">Powered by LightningCreeper | Time 2024~2024
