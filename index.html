@@ -18,31 +18,55 @@
     <style>
         body {
             padding-bottom: 50px;
+            padding-top: 100px;
         }
 
-        .footer {
+        footer {
             position: fixed;
             left: 0px;
             bottom: 0px;
             width: 100%;
             height: 50px;
-            background-color: #00ffff;
+            background-color: #cccccc;
+            z-index: 9998;
+        }
+
+        header {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100px;
             z-index: 9999;
+            background-color: #cccccc;
         }
     </style>
 </head>
 
 <body>
-    <h1> LightningCreeper's Blog</h1>
-    <h3> Welcome </h3>
-    <h2> Blog List </h2>
-    <p>
-        --- <a href="https://LightningCreeper.github.io/About me"> About me </a> ---
-    </p>
-    <p>
-        --- <a href="https://LightningCreeper.github.io/HLD"> HLD </a> ---
-    </p>
+    <header>
+        <h1 style="text-align: center;">LightningCreeper's Blog</h1>
+        <p style="text-align: center;">LightningCreeper's Blog</p>
+    </header>
 
+    <div style="background-color: #cccccc;width: 90%; height: 150px; border: 1px">
+        <h1>
+            <a href="/About me"> About me </a>
+        </h1>
+    </div>
+
+    <div style="background-color: #cccccc;width: 90%; height: 150px; border: 1px; margin: 5%">
+        <h1>
+            <a href="/HLD"> HLD </a>
+        </h1>
+    </div>
+
+    <footer>
+        <p style="text-align: center; position: static;">
+            Powered by LightningCreeper | Time 2024~2024 | <a href="https://LightningCreeper.github.io"> Back to the
+                main page </a>
+        </p>
+    </footer>
 </body>
 
 </html>
