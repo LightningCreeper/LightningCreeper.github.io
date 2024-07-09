@@ -39,7 +39,3 @@ body::-webkit-scrollbar-thumb {
             color-stop(0.4, rgb(97, 98, 99)),
             color-stop(0.8, rgb(125, 126, 128)));
 }
-
-header {
-    box-shadow: 0px 0px 3px 5px #aaaaaa;
-}
