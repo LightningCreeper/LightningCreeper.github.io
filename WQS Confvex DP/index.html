@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LightningCreeper's Blog</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    });
+     
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center;">WQS二分与凸优化DP</h1>
+    </header>
+
+    <div class="art">
+        <h1>WQS 二分</h1>
+
+        <p>决策单调性，四边形不等式</p>
+
+        <p>$O(nk\log n) \to O(n\log n)$</p>
+
+        <h2>想法</h2>
+
+        <p>转移转成最短路。</p>
+
+        <p>最短路，转移代价 $\to$ 边权。</p>
+
+        <p>恰好选 k 条边的最短路为 $f$。</p>
+
+        <p>$f$ 必须有凸性。</p>
+
+        <p>加上额外代价$\lambda$:</p>
+
+        <ul>
+            <li>
+                <p>$\lambda \to \inf$， 选 1 边</p>
+            </li>
+            <li>
+                <p>$\lambda \to -\inf$， 选 n 边</p>
+            </li>
+            <li>
+                <p>二分</p>
+            </li>
+        </ul>
+
+        <p>最小化 $\lambda k+f_k$。</p>
+
+        <p>满足四边形不等式一定凸。</p>
+
+        <p>$$
+            2f<em>{k+1} \le f</em>k+f_{k + 2}
+            $$</p>
+
+        <p>通常跟决策单调性一起用。</p>
+
+        <p>$$
+            w(i,j) \to w(i,j)+\lambda
+            $$</p>
+
+        <p>对于满足四边形不等式的序列DP可做到 $O(n\log n \log W)$。</p>
+
+        <p>对于有的二维限制就 wqs二分套 wqs 二分。</p>
+
+        <h2>题目</h2>
+
+        <h3><a href="https://uoj.ac/problem/240">[IOI2016] aliens</a></h3>
+
+        <p>如果一个点在对角线下面，翻上去。</p>
+
+        <p>如果一个点右上角有点，就直接把这个点删掉。</p>
+
+        <p>对剩下的点作 DP</p>
+
+        <p>$j + 1 \to i$， 减去重叠部分。</p>
+
+        <p>因为拍的越多越优，所以直接拍 $k$ 张。</p>
+
+        <h3><a href="https://hydro.ac/d/bzoj/p/2654">tree</a></h3>
+
+        <p>板子。</p>
+
+        <h3><a href="https://acm.hdu.edu.cn/showproblem.php?pid=6094">Rikka with K-Match</a></h3>
+
+        <p>因为可以用费用流，所以是凸性。</p>
+
+        <p>注意wqs二分上限 $n<em>m</em>W$。</p>
+
+        <p>有可能当 $k \to k+1$ 时，可能 $0 \to \dfrac{nmW}{2}$</p>
+
+        <h3><a href="https://loj.ac/p/2478">林克卡特树</a> 或 <a href="https://luogu.com.cn/problem/P4383">林克卡特树</a></h3>
+
+        <p>等价于搞 k+1 个连通块然后直径加起来。</p>
+
+        <p>直接树形DP。</p>
+
+        <p>凸性出题人告诉了。</p>
+
+        <h1>凸性优化DP</h1>
+
+        <h2>例题</h2>
+
+        <h3><a href="https://luogu.com.cn/problem/P4331">sequence</a></h3>
+
+        <p>令 $a<em>i:=a</em>i-i$，$b<em>i:=b</em>i-i$</p>
+
+        <p>$dp<em>{i,j}$ 考虑到$i$, $b</em>i=j$</p>
+
+        <p>$$
+            dp<em>{i,j}=\min \left{ dp</em>{i-1,k} \right} + |j-a_i|
+            $$</p>
+
+        <ol>
+            <li>$dp_{i,*}$, 凸</li>
+            <li>维护函数拐点</li>
+        </ol>
+
+        <h2>习题</h2>
+
+        <ul>
+            <li>
+                <p><a href="https://codeforces.com/contest/1634/problem/G">A New Begining</a></p>
+            </li>
+            <li>
+                <p><a href="https://codeforces.com/contest/280/problem/E">Sequence Transformation</a></p>
+            </li>
+            <li>
+                <p><a href="https://codeforces.com/contest/864/problem/D">Make a Permutation!</a></p>
+            </li>
+            <li>
+                <p><a href="https://uoj.ac/problem/455">【UER #8】雪灾与外卖</a></p>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p style="text-align: center; position: static;">
+            Powered by LightningCreeper | Time 2024~2024 | <a href="https://LightningCreeper.github.io"> Back to the
+                main page </a>
+        </p>
+    </footer>
+</body>
+
+</html>
