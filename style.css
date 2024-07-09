@@ -80,3 +80,10 @@ header {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.art {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
