@@ -73,15 +73,11 @@ header {
     text-align: center;
     position: relative;
     cursor: pointer;
-    text-decoration: underline;
     background-color: #cccccc;
-    width: 90%;
     height: 300px;
     border: 1px;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 .art {
