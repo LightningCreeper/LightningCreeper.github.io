@@ -6,3 +6,5 @@ function changeheader() {
         element.item[0].style.height == '200px'
     }
 }
+
+window.onload = load;
