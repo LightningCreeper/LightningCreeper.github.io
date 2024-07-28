@@ -1,4 +1,4 @@
-function changeheader(id, id2) {
+function changeheader(id, id2, id3) {
     var element = document.getElementById(id);
     var element2 = document.getElementById(id2);
     var element3 = document.getElementById(id3);
