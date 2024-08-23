@@ -16,11 +16,12 @@ li {
 
 code {
     font-size: 14px;
-    color: #E6DB74
+    font-family: "Jetbrains Mono";
+    color: #E6DB74;
 }
 
 blockquote {
-    color: #75715E
+    color: #75715E;
 }
 
 /*滚动条里面轨道*/
@@ -77,7 +78,7 @@ header {
 }
 
 a {
-    color: #66D9EF
+    color: #66D9EF;
 }
 
 .box {
