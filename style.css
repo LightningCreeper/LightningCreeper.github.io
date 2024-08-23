@@ -1,6 +1,6 @@
 body {
-    background-color: #ddddff;
-    color: #222222;
+    background-color: #272822;
+    color: #F8F8F2;
 }
 
 p {
@@ -15,18 +15,19 @@ li {
 
 code {
     font-size: 14px;
+    color: #E6DB74
 }
 
 /*滚动条里面轨道*/
 body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
-    background-color: rgb(20, 19, 19);
+    -webkit-box-shadow: inset 0 0 6px #66D9EF;
+    background-color: #272822;
 }
 
 /*定义滚动条整体的样式*/
 body::-webkit-scrollbar {
     width: 6px;
-    background-color: rgb(20, 19, 19);
+    background-color: #272822;
 }
 
 /*滚动条的样式*/
@@ -51,7 +52,7 @@ footer {
     bottom: 0px;
     width: 100%;
     height: 50px;
-    background-color: #bbbbff;
+    background-color: #20211B;
     z-index: 9998;
 }
 
@@ -66,14 +67,18 @@ header {
     padding-left: 25px;
     padding-right: 25px;
     z-index: 9999;
-    background-color: #bbbbff;
+    color: #F92772 background-color: #20211B;
+}
+
+href {
+    color: #66D9EF
 }
 
 .box {
     text-align: center;
     position: relative;
     cursor: pointer;
-    background-color: #ccccff;
+    background-color: #20211B;
     height: 300px;
     border: 1px;
     margin-top: 10px;
