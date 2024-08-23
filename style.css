@@ -18,6 +18,10 @@ code {
     color: #E6DB74
 }
 
+blockquote {
+    color: #75715E
+}
+
 /*滚动条里面轨道*/
 body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px #66D9EF;
@@ -67,7 +71,8 @@ header {
     padding-left: 25px;
     padding-right: 25px;
     z-index: 9999;
-    color: #F92772 background-color: #20211B;
+    color: #F92772;
+    background-color: #20211B;
 }
 
 href {
