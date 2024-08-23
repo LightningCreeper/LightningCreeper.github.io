@@ -67,17 +67,16 @@ header {
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 100px;
+    height: 75px;
     margin-bottom: 25px;
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-top: 10px;
+    padding-left: 50px;
     z-index: 9999;
     background-color: #20211B;
 }
 
 h1 {
-    color:#F92772
+    color: #F92772
 }
 
 a {
