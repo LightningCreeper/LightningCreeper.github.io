@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LightningCreeper's Blog</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    });
+     
+    </script>
+    <script type="text/javascript" src="../script.js"></script>
+</head>
+
+<body id="body">
+    <header>
+        <h1 style="margin-top: 15px;"> exST表</h1>
+    </header>
+
+    <div class="art">
+        <p>
+            无聊捣鼓了一下发明了一个新的数据结构！
+        </p>
+        <p>
+            加法这种操作它有可减性，所以可以通过前缀和来统计。<br>
+            取max有可重性，所以可以通过ST表来统计。
+        </p>
+        <p>
+            但有的操作既没有可减性也没有可重性（例如矩阵的乘法）对于这种数据怎么查询呢？
+        </p>
+        <p>
+            线段树不失为一种方法但是码量大还常数大。
+        </p>
+        <p>
+            接下来我将介绍我发明的 exST 表！
+        </p>
+        <hr>
+        <p>
+            这玩意儿本质原理先预处理出 ST 表。跟正常 ST 表一样。
+        </p>
+        <p>
+            查询才是关键：对于一个区间 $[l, r]$，给他劈成两份，取 $t=\lfloor \log_2 (r - l + 1) \rfloor$。
+        </p>
+        <p>
+            然后对于 $[l, l + 2^t - 1]$ 直接查询，对于 $[l + 2^t, r]$ 递归查询，在实际中其实可以迭代查询。
+        </p>
+        <p>
+            显然查询 $O(\log n)$，常数甚至比树状数组还小，$10^8$ 的数组运行 $10^8$ 次随机的查询约 1s，此处测试使用加法进行测试。可以看为 $O(1)$。
+        </p>
+    </div>
+
+    <footer>
+        <p style="text-align: center; position: static;">
+            Powered by LightningCreeper | Time 2024~2024 | <a href="https://LightningCreeper.github.io"> Back to the
+                main page </a>
+        </p>
+    </footer>
+</body>
+
+</html>
